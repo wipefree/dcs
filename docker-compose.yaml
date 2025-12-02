@@ -9,7 +9,7 @@ services:
       dockerfile: buildwar.Dockerfile
     volumes:
       - swapdir:/boxfuse-sample-java-war-hello/target
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
 
   tomcat:
     build:
@@ -21,7 +21,7 @@ services:
       - '8080:8080'
     volumes:
       - swapdir:/opt/apache-tomcat-9.0.34/webapps/
-    command: tail -f /dev/null
+    #command: tail -f /dev/null
 
 #cp /tmp/shared/hello-1.0.war /opt/apache-tomcat-9.0.34/webapps/
 volumes:
