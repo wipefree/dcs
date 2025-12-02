@@ -11,11 +11,9 @@ RUN apt-get install -y openjdk-11-jdk wget && \
 RUN tar -xzf apache-tomcat-9.0.34.tar.gz -C /opt/
 RUN ln -s /opt/apache-tomcat-9.0.34 /opt/tomcat &&  \
     ln -s /opt/tomcat/webapps /webapps
+#WORKDIR /tmp
+#RUN cp ./hello-1.0.war /opt
 
 EXPOSE 8080
-
-WORKDIR /tmp
-RUN cp ./hello-1.0.war /opt
-
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 # ************** END of install Tomcat
