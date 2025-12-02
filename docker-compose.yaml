@@ -11,7 +11,7 @@ services:
       - swapdir:/tmp/shared
     command:
       #- cp /tmp/hello-1.0.war /tmp/shared
-      - 'tail -f /dev/null'
+      #- 'tail -f /dev/null'
 
 #  tomcat:
 #    build:
