@@ -8,9 +8,10 @@ services:
       context: ./
       dockerfile: buildwar.Dockerfile
     volumes:
-      - swapdir:/tmp
+      - swapdir:/shared
     command:
-      'tail -f /dev/null'
+      - cp /tmp/hello-1.0.war /shared
+      - 'tail -f /dev/null'
 
   tomcat:
     build:
@@ -21,9 +22,9 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - swapdir:/tmp
+      - swapdir:/shared
     command:
-      - cp /tmp/hello-1.0.war /opt
+      - cp /shared/hello-1.0.war /webapps
 #      'tail -f /dev/null'
 
 volumes:

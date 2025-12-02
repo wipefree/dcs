@@ -16,3 +16,5 @@ WORKDIR /boxfuse-sample-java-war-hello
 RUN mvn package # Building war: /boxfuse-sample-java-war-hello/target/hello-1.0.war
 WORKDIR /boxfuse-sample-java-war-hello/target/
 RUN cp ./hello-1.0.war /tmp
+WORKDIR /shared
+
