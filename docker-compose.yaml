@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: buildwar.Dockerfile
     volumes:
-      - app:/tmp
+      - ./app:/tmp
     command:
       'tail -f /dev/null'
 
@@ -17,11 +17,12 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - /app:/tmp
+      - ./app:/tmp
     depends_on:
       - buildwar
     command:
       'tail -f /dev/null'
+
 volumes:
   app:
 ...
