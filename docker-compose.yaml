@@ -8,9 +8,9 @@ services:
       context: ./
       dockerfile: buildwar.Dockerfile
     volumes:
-      - swapdir:/shared
+      - swapdir:/tmp/shared
     command:
-      - cp /tmp/hello-1.0.war /shared
+      - cp /tmp/hello-1.0.war /tmp/shared
       - 'tail -f /dev/null'
 
 #  tomcat:
