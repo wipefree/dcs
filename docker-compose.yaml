@@ -1,12 +1,19 @@
 ---
 version: '3'
 services:
-  tomcat:
+  buildwar:
     build:
       context: ./
-      dockerfile: tomcat.Dockerfile
-    ports:
-      - '8080:8080'
+      dockerfile: buildwar.Dockerfile
     volumes:
       - './app:/tmp'
+
+#  tomcat:
+#    build:
+#      context: ./
+#      dockerfile: tomcat.Dockerfile
+#    ports:
+#      - '8080:8080'
+#    volumes:
+#      - './app:/tmp'
 ...
