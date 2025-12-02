@@ -14,7 +14,7 @@ RUN apt install -y default-jdk && \
 RUN git clone https://github.com/boxfuse/boxfuse-sample-java-war-hello.git
 WORKDIR /boxfuse-sample-java-war-hello
 RUN mvn package # Building war: /boxfuse-sample-java-war-hello/target/hello-1.0.war
-RUN mkdir /tmp/shared
-WORKDIR /boxfuse-sample-java-war-hello/target/
-RUN cp ./hello-1.0.war /tmp/shared
+#RUN mkdir /tmp/shared
+#WORKDIR /boxfuse-sample-java-war-hello/target/
+#RUN cp ./hello-1.0.war /tmp/shared
 
