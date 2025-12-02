@@ -18,6 +18,4 @@ services:
       - './app:/webapps'
     depends_on:
       - buildwar
-    command:
-      - '/bin/bash'
 ...
