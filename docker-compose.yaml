@@ -9,8 +9,7 @@ services:
       dockerfile: buildwar.Dockerfile
     volumes:
       - swapdir:/tmp/shared
-    command:
-      - tail -f /dev/null
+    command: tail -f /dev/null
 
 #  tomcat:
 #    build:
