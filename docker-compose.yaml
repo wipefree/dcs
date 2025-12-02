@@ -22,7 +22,6 @@ services:
     volumes:
       - swapdir:/tmp/shared
     command: >
-      cp /tmp/shared/hello-1.0.war /opt/apache-tomcat-9.0.34/webapps &&
       tail -f /dev/null
 
 volumes:
