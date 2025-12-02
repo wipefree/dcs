@@ -15,6 +15,6 @@ RUN mkdir /tmp/shared
 
 EXPOSE 8080
 
-CMD cp /tmp/shared/hello-1.0.war /webapps
+#CMD cp /tmp/shared/hello-1.0.war /webapps
 #CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 # ************** END of install Tomcat
