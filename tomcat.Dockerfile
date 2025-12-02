@@ -13,6 +13,9 @@ RUN ln -s /opt/apache-tomcat-9.0.34 /opt/tomcat &&  \
     ln -s /opt/tomcat/webapps /webapps
 
 EXPOSE 8080
-CMD ["cp /tmp/hello-1.0.war /webapps"]
+
+WORKDIR /tmp/
+RUN cp ./hello-1.0.war /webapps
+
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 # ************** END of install Tomcat
