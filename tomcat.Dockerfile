@@ -3,7 +3,7 @@ MAINTAINER 'Andre'
 
 RUN apt update && apt install -y net-tools
 
-# ************** install Tomcat
+#*** install Tomcat
 RUN apt-get install -y openjdk-11-jdk wget && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
@@ -11,8 +11,6 @@ RUN apt-get install -y openjdk-11-jdk wget && \
 RUN tar -xzf apache-tomcat-9.0.34.tar.gz -C /opt/
 RUN ln -s /opt/apache-tomcat-9.0.34 /opt/tomcat &&  \
     ln -s /opt/tomcat/webapps /webapps
-RUN mkdir /tmp/shared
-
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
-# ************** END of install Tomcat
+#*** END of install Tomcat

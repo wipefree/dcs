@@ -1,7 +1,4 @@
 ---
-# version: '3'
-#yaml: the attribute `version` is obsolete, it will be ignored,
-#please remove it to avoid potential confusion
 services:
   buildwar:
     build:
@@ -23,7 +20,6 @@ services:
       - swapdir:/opt/apache-tomcat-9.0.34/webapps/
     #command: tail -f /dev/null
 
-#cp /tmp/shared/hello-1.0.war /opt/apache-tomcat-9.0.34/webapps/
 volumes:
   swapdir:
 ...
