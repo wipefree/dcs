@@ -14,9 +14,3 @@ RUN ln -s /opt/apache-tomcat-9.0.34 /opt/tomcat
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
 # ************** END of install Tomcat
-
-WORKDIR /boxfuse-sample-java-war-hello/target/
-RUN cp ./hello-1.0.war /tmp
-#RUN cp ./hello-1.0.war /opt/apache-tomcat-9.0.34/webapps/
-
-# CMD ["/bin/bash"]
