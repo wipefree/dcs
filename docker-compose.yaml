@@ -9,8 +9,6 @@ services:
       dockerfile: buildwar.Dockerfile
     volumes:
       - app:/tmp
-    command:
-      'tail -f /dev/null'
 
   tomcat:
     build:
@@ -22,8 +20,8 @@ services:
       - app:/webapps
     depends_on:
       - buildwar
-    command:
-      'tail -f /dev/null'
+#    command:
+#      'tail -f /dev/null'
 
 volumes:
   app:
