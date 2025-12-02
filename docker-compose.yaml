@@ -19,7 +19,8 @@ services:
     volumes:
       - app:/tmp
     command:
-      - cp /tmp/hello-1.0.war /opt
+      - cd /tmp
+      #- cp /tmp/hello-1.0.war /opt
     depends_on:
       - buildwar
 #    command:
