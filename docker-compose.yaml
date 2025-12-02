@@ -16,13 +16,14 @@ services:
     build:
       context: ./
       dockerfile: tomcat.Dockerfile
+    depends_on:
+      - buildwar
     ports:
       - '8080:8080'
     volumes:
       - swapdir:/tmp
-    depends_on:
-      - buildwar
-#    command:
+    command:
+      - cp /tmp/hello-1.0.war /opt
 #      'tail -f /dev/null'
 
 volumes:
