@@ -21,7 +21,9 @@ services:
       - '8080:8080'
     volumes:
       - swapdir:/tmp/shared
-    command: cp /tmp/shared/hello-1.0.war /webapps
+    command: |
+      cp /tmp/shared/hello-1.0.war /webapps
+      tail -f /dev/null
 
 volumes:
   swapdir:
