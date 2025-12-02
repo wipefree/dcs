@@ -1,5 +1,7 @@
 ---
-version: '3'
+# version: '3'
+#yaml: the attribute `version` is obsolete, it will be ignored,
+#please remove it to avoid potential confusion
 services:
   buildwar:
     build:
@@ -17,7 +19,7 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - app:/tmp
+      - app:/webapps
     depends_on:
       - buildwar
     command:
