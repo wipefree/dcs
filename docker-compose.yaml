@@ -17,7 +17,7 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - /app:/webapps
+      - /app:/opt/apache-tomcat-9.0.34/webapps
     depends_on:
       - buildwar
     command:
