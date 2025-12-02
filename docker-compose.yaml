@@ -5,6 +5,8 @@ services:
     build:
       context: ./
       dockerfile: tomcat.Dockerfile
+    ports:
+      - '8080:8080'
     volumes:
       - './app:/tmp'
 ...
