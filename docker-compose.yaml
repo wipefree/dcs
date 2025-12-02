@@ -7,7 +7,6 @@ services:
       dockerfile: buildwar.Dockerfile
     volumes:
       - './app:/tmp'
-    command: /bin/bash
 
   tomcat:
     build:
@@ -16,7 +15,7 @@ services:
     ports:
       - '8080:8080'
     volumes:
-      - './app:/tmp'
+      - './app:/webapps'
     depends_on:
       - buildwar
 ...
