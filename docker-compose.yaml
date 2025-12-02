@@ -11,19 +11,17 @@ services:
       - swapdir:/tmp/shared
     command: tail -f /dev/null
 
-#  tomcat:
-#    build:
-#      context: ./
-#      dockerfile: tomcat.Dockerfile
-#    depends_on:
-#      - buildwar
-#    ports:
-#      - '8080:8080'
-#    volumes:
-#      - swapdir:/shared
-#    command:
-#      - cp /shared/hello-1.0.war /webapps
-#      'tail -f /dev/null'
+  tomcat:
+    build:
+      context: ./
+      dockerfile: tomcat.Dockerfile
+    depends_on:
+      - buildwar
+    ports:
+      - '8080:8080'
+    volumes:
+      - swapdir:/tmp/shared
+    command: cp /tmp/shared/hello-1.0.war /webapps
 
 volumes:
   swapdir:
