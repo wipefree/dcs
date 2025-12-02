@@ -7,7 +7,7 @@ services:
       dockerfile: buildwar.Dockerfile
     volumes:
       - './app:/tmp'
-    command: tail -f /dev/null
+    command: /bin/bash
 
 #  tomcat:
 #    build:
